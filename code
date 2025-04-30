@@ -1,10 +1,10 @@
 with open("CdSe_CdZnS Core_Shell.txt") as f:
     values = [float(s.split('\t')[1].strip().replace(',', '.')) for s in f.readlines()]
     mean_value = sum(values) / len(values)
-    mean_sqrt_value = 0
+    standart_deviation = 0
     for x in values:
-        mean_sqrt_value += (x - mean_value) ** 2
-    mean_sqrt_value /= len(values)
-    mean_sqrt_value = mean_sqrt_value ** 0.5
+        standart_deviation += (x - mean_value) ** 2
+    standart_deviation /= len(values)
+    standart_deviation = standart_deviation ** 0.5
 
-    print(f"Mean value: {mean_value}\nMean sqrt value: {mean_sqrt_value}")
+    print(f"Mean value: {mean_value}\nMean standart deviation: {standart_deviation}")
