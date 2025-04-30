@@ -7,4 +7,4 @@ with open("CdSe_CdZnS Core_Shell.txt") as f:
     standart_deviation /= len(values)
     standart_deviation = standart_deviation ** 0.5
 
-    print(f"Mean value: {mean_value}\nMean standart deviation: {standart_deviation}")
+    print(f"Mean value: {mean_value}\nStandart deviation: {standart_deviation}")
